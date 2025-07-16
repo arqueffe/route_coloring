@@ -1,10 +1,19 @@
-# Graph Coloring Application with Z3
+# A Climbing Gym Specific Graph Coloring Problem using Z3
 
-A WPF application that allows users to define graph coloring instances and solve them using the Z3 theorem prover.
+When route setting in small climbing gym the number of hold colors may be limited.
+This limitation creates an important problem for the route setters, as they have to make sure that no two adjacent routes contain similar hold color while maximazing the amount of hold usage.
+Indeed, it would be a shame to leave holds unused because the hold color assigment on the walls was sub-optimal.
+
+In order to assist route setters, this application allows the user to design the walls, the number of routes on each wall and the available colors.
+Then, the route setters can take informed decision on which color place on each wall.
+
+This graph coloring is a special case where:
+ - A wall is a fully connected sub-graph which each node representing a route on it;
+ - Two adjacent walls are full connected between each-other.
+The final graph obtained can be seen as a completet n-partite graph with n the number of walls.
 
 ## Features
 
-- **Interactive Graph Editor**: Draw graphs by adding nodes and edges
 - **Walls & Routes Interface**: Define graphs using an intuitive wall-based paradigm
 - **Color Management**: Define available colors and usage constraints
 - **Partial Coloring**: Pre-assign colors to specific nodes/routes
